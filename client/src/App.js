@@ -65,8 +65,7 @@ function App() {
 						<div className="checkbox"></div>
 
 						<div className="text">{todo.text}</div>
-
-						<div className="delete-todo" onClick={() => deleteTodo(todo._id)}>x</div>
+						<div className="delete-todo" onClick={(e)=> {e.stopPropagation(); deleteTodo(todo._id)}}>x</div>
 					</div>
 				)) : (
 					<p>You currently have no tasks</p>
